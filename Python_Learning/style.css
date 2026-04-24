@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(135deg, #ffb6c1, #ff69b4);
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+/* INTRO + LOCK */
+#intro, #lock {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 25px;
+  background: white;
+  color: #ff69b4;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+}
+
+/* 📸 SLIDER (LEFT → RIGHT MOVING) */
+.slideshow-wrapper {
+  width: 100vw;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.slideshow-track {
+  display: flex;
+  width: max-content;
+  animation: slideMove 12s linear infinite;
+}
+
+.slideshow-track img {
+  width: 80vw;
+  max-width: 350px;
+  height: 55vh;
+  object-fit: cover;
+  border-radius: 20px;
+  margin: 0 10px;
+}
+
+/* movement */
+@keyframes slideMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* TEXT */
+#card {
+  margin-top: 20px;
+  padding: 15px;
+  max-width: 400px;
+  margin: auto;
+}
+
+/* HEARTS */
+.heart {
+  position: absolute;
+  color: white;
+  animation: float 6s linear forwards;
+}
+
+@keyframes float {
+  from { transform: translateY(100vh); opacity: 1; }
+  to { transform: translateY(-10vh); opacity: 0; }
+}

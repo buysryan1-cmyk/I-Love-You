@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<audio id="music" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div id="hearts"></div>
+
+<!-- INTRO -->
+<div id="intro">
+  <h1>💖 A small surprise for someone special 💖</h1>
+  <button onclick="start()">Tap to begin ✨</button>
+</div>
+
+<!-- LOCK -->
+<div id="lock" class="hidden">
+  <h2>Enter your name 💕</h2>
+  <input id="nameInput" placeholder="Your name...">
+  <button onclick="unlock()">Open Surprise 🎁</button>
+</div>
+
+<!-- MAIN -->
+<div id="main" class="hidden">
+
+  <h1>💖 Happy Birthday 💖</h1>
+
+  <!-- 📸 SLIDING CAROUSEL -->
+  <div class="slideshow-wrapper">
+    <div class="slideshow-track">
+      <img src="img1.jpeg">
+      <img src="img2.jpeg">
+      <img src="img3.jpeg">
+      <img src="img4.jpeg">
+      <img src="img5.jpeg">
+      <img src="img6.jpeg">
+      <img src="img7.jpeg">
+    </div>
+  </div>
+
+  <!-- TEXT -->
+  <div id="card">
+    <p id="typing"></p>
+
+    <p id="note">
+      Happy birthday my love. You have no idea how much I love you and how much you mean to me.
+      I hope I can spend soooo many more Birthdays with you. You are my everything.
+    </p>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
